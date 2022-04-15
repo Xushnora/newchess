@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #AE681A;
+    color: #fff;
+}
+
+.bigBox {
+    display: flex;
+    padding-top: 100px;
+    
+}
+
+/* figura btns block */
+
+.figura__box button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #fff;
+}
+
+.figura__box button img{
+    width: 45px;
+    height: 45px;
+}
+
+
+.btnParent {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chesList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chesItem {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #533402;
+    background-color: rgb(240, 169, 76);
+    cursor: pointer;
+}
+
+.figura__box {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cordinata-x {
+    padding-top: 14px;
+    width: 120px;
+    height: 50px;
+    background-color: #fff;
+    color: #533402;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    margin-bottom: 16px;
+}
+
+.cordinata-y {
+    padding-top: 14px;
+    width: 120px;
+    height: 50px;
+    background-color: #fff;
+    color: #533402;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.cordinataBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.red {
+    background: red !important;
+    box-shadow: inset #000 !important;
+}
+
+.green {
+    background-color: rgba(0, 128, 0, 0.87);
+    box-shadow: inset #000 !important;
+}
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 400px;
+    list-style-type: none;
+}
+.list li{
+    width: 45px;
+    height: 50px;
+    border: 1px solid rgb(104, 59, 0);
+    cursor: pointer;
+}
+
