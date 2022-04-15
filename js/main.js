@@ -122,18 +122,34 @@ chesItems.forEach((e, i) => {
                         xxx == ((xx - 0) + 2) && yyy == ((yy - 0) - 2) ||
                         xxx == ((xx - 0) + 3) && yyy == ((yy - 0) - 3) ||
                         xxx == ((xx - 0) + 4) && yyy == ((yy - 0) - 4) ||
+                        xxx == ((xx - 0) + 5) && yyy == ((yy - 0) - 5) ||
+                        xxx == ((xx - 0) + 6) && yyy == ((yy - 0) - 6) ||
+                        xxx == ((xx - 0) + 7) && yyy == ((yy - 0) - 7) ||
+                        xxx == ((xx - 0) + 8) && yyy == ((yy - 0) - 8) ||
                         xxx == ((xx - 0) + 1) && yyy == ((yy - 0) + 1) ||
                         xxx == ((xx - 0) + 2) && yyy == ((yy - 0) + 2) ||
                         xxx == ((xx - 0) + 3) && yyy == ((yy - 0) + 3) ||
                         xxx == ((xx - 0) + 4) && yyy == ((yy - 0) + 4) ||
+                        xxx == ((xx - 0) + 5) && yyy == ((yy - 0) + 5) ||
+                        xxx == ((xx - 0) + 6) && yyy == ((yy - 0) + 6) ||
+                        xxx == ((xx - 0) + 7) && yyy == ((yy - 0) + 7) ||
+                        xxx == ((xx - 0) + 8) && yyy == ((yy - 0) + 8) ||
                         xxx == ((xx - 0) - 1) && yyy == ((yy - 0) + 1) ||
                         xxx == ((xx - 0) - 2) && yyy == ((yy - 0) + 2) ||
                         xxx == ((xx - 0) - 3) && yyy == ((yy - 0) + 3) ||
                         xxx == ((xx - 0) - 4) && yyy == ((yy - 0) + 4) ||
+                        xxx == ((xx - 0) - 5) && yyy == ((yy - 0) + 5) ||
+                        xxx == ((xx - 0) - 6) && yyy == ((yy - 0) + 6) ||
+                        xxx == ((xx - 0) - 7) && yyy == ((yy - 0) + 7) ||
+                        xxx == ((xx - 0) - 8) && yyy == ((yy - 0) + 8) ||
                         xxx == ((xx - 0) - 1) && yyy == ((yy - 0) - 1) ||
                         xxx == ((xx - 0) - 2) && yyy == ((yy - 0) - 2) ||
                         xxx == ((xx - 0) - 3) && yyy == ((yy - 0) - 3) ||
-                        xxx == ((xx - 0) - 4) && yyy == ((yy - 0) - 4) 
+                        xxx == ((xx - 0) - 4) && yyy == ((yy - 0) - 4) ||
+                        xxx == ((xx - 0) - 5) && yyy == ((yy - 0) - 5) ||
+                        xxx == ((xx - 0) - 6) && yyy == ((yy - 0) - 6) ||
+                        xxx == ((xx - 0) - 7) && yyy == ((yy - 0) - 7) ||
+                        xxx == ((xx - 0) - 8) && yyy == ((yy - 0) - 8) 
                     ) {
                         // console.log('ok');
                         item.classList.add('green');
@@ -153,22 +169,42 @@ chesItems.forEach((e, i) => {
                     let xxx = item.classList[0].split('')[1];
                     let yyy = item.classList[1].split('')[1];
 
-                    if(xxx == ((xx - 0) + 1) && yyy == ((yy - 0) - 1) ||
-                        xxx == ((xx - 0) + 2) && yyy == ((yy - 0) - 2) ||
-                        xxx == ((xx - 0) + 3) && yyy == ((yy - 0) - 3) ||
-                        xxx == ((xx - 0) + 4) && yyy == ((yy - 0) - 4) ||
-                        xxx == ((xx - 0) + 1) && yyy == ((yy - 0) + 1) ||
-                        xxx == ((xx - 0) + 2) && yyy == ((yy - 0) + 2) ||
-                        xxx == ((xx - 0) + 3) && yyy == ((yy - 0) + 3) ||
-                        xxx == ((xx - 0) + 4) && yyy == ((yy - 0) + 4) ||
-                        xxx == ((xx - 0) - 1) && yyy == ((yy - 0) + 1) ||
-                        xxx == ((xx - 0) - 2) && yyy == ((yy - 0) + 2) ||
-                        xxx == ((xx - 0) - 3) && yyy == ((yy - 0) + 3) ||
-                        xxx == ((xx - 0) - 4) && yyy == ((yy - 0) + 4) ||
-                        xxx == ((xx - 0) - 1) && yyy == ((yy - 0) - 1) ||
-                        xxx == ((xx - 0) - 2) && yyy == ((yy - 0) - 2) ||
-                        xxx == ((xx - 0) - 3) && yyy == ((yy - 0) - 3) ||
-                        xxx == ((xx - 0) - 4) && yyy == ((yy - 0) - 4) ||
+                    if( 
+                        // fil boshlandi
+                    xxx == ((xx - 0) + 1) && yyy == ((yy - 0) - 1) ||
+                    xxx == ((xx - 0) + 2) && yyy == ((yy - 0) - 2) ||
+                    xxx == ((xx - 0) + 3) && yyy == ((yy - 0) - 3) ||
+                    xxx == ((xx - 0) + 4) && yyy == ((yy - 0) - 4) ||
+                    xxx == ((xx - 0) + 5) && yyy == ((yy - 0) - 5) ||
+                    xxx == ((xx - 0) + 6) && yyy == ((yy - 0) - 6) ||
+                    xxx == ((xx - 0) + 7) && yyy == ((yy - 0) - 7) ||
+                    xxx == ((xx - 0) + 8) && yyy == ((yy - 0) - 8) ||
+                    xxx == ((xx - 0) + 1) && yyy == ((yy - 0) + 1) ||
+                    xxx == ((xx - 0) + 2) && yyy == ((yy - 0) + 2) ||
+                    xxx == ((xx - 0) + 3) && yyy == ((yy - 0) + 3) ||
+                    xxx == ((xx - 0) + 4) && yyy == ((yy - 0) + 4) ||
+                    xxx == ((xx - 0) + 5) && yyy == ((yy - 0) + 5) ||
+                    xxx == ((xx - 0) + 6) && yyy == ((yy - 0) + 6) ||
+                    xxx == ((xx - 0) + 7) && yyy == ((yy - 0) + 7) ||
+                    xxx == ((xx - 0) + 8) && yyy == ((yy - 0) + 8) ||
+                    xxx == ((xx - 0) - 1) && yyy == ((yy - 0) + 1) ||
+                    xxx == ((xx - 0) - 2) && yyy == ((yy - 0) + 2) ||
+                    xxx == ((xx - 0) - 3) && yyy == ((yy - 0) + 3) ||
+                    xxx == ((xx - 0) - 4) && yyy == ((yy - 0) + 4) ||
+                    xxx == ((xx - 0) - 5) && yyy == ((yy - 0) + 5) ||
+                    xxx == ((xx - 0) - 6) && yyy == ((yy - 0) + 6) ||
+                    xxx == ((xx - 0) - 7) && yyy == ((yy - 0) + 7) ||
+                    xxx == ((xx - 0) - 8) && yyy == ((yy - 0) + 8) ||
+                    xxx == ((xx - 0) - 1) && yyy == ((yy - 0) - 1) ||
+                    xxx == ((xx - 0) - 2) && yyy == ((yy - 0) - 2) ||
+                    xxx == ((xx - 0) - 3) && yyy == ((yy - 0) - 3) ||
+                    xxx == ((xx - 0) - 4) && yyy == ((yy - 0) - 4) ||
+                    xxx == ((xx - 0) - 5) && yyy == ((yy - 0) - 5) ||
+                    xxx == ((xx - 0) - 6) && yyy == ((yy - 0) - 6) ||
+                    xxx == ((xx - 0) - 7) && yyy == ((yy - 0) - 7) ||
+                    xxx == ((xx - 0) - 8) && yyy == ((yy - 0) - 8) ||
+                    // fil tugadi
+                    // ot boshlandi
                         xxx == ((xx - 0) - 1)  && yyy == yy || 
                         xxx == ((xx - 0) - 1) && yyy == ((yy - 0) + 1) ||
                         xxx == xx && yyy == ((yy - 0) + 1) || 
@@ -177,6 +213,8 @@ chesItems.forEach((e, i) => {
                         xxx == ((xx - 0) + 1) && yyy == ((yy - 0) - 1) ||
                         xxx == xx && yyy == ((yy - 0) - 1) || 
                         xxx == ((xx - 0) - 1) && yyy == ((yy - 0) - 1) ||
+                        // ot tugadi
+                        // tora boshlandi
                         xxx == xx && yyy == ((yy - 0) - 1) || 
                         xxx == xx && yyy == ((yy - 0) - 2) ||
                         xxx == xx && yyy == ((yy - 0) - 3) ||
@@ -209,6 +247,7 @@ chesItems.forEach((e, i) => {
                         xxx == ((xx - 0) - 6) && yyy == yy ||
                         xxx == ((xx - 0) - 7) && yyy == yy ||
                         xxx == ((xx - 0) - 8) && yyy == yy 
+                        // tora tugadi
                     ) {
                         // console.log('ok');
                         item.classList.add('green');
