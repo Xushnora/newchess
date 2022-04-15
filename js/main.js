@@ -1,4 +1,3 @@
-let chesList = document.querySelector('.chesList');
 
 let x = 0;
 let y = 0;
@@ -314,12 +313,14 @@ chesItems.forEach((e, i) => {
 })
 
 
-// chesList.addEventListener("mouseout", ()=>{
-//     console.log('ok');
-//     chesItems.forEach((item) =>{
-//         item.classList.remove('green');
-//     })
-// })
+elUl.addEventListener("mouseout", ()=>{
+    chesItems.forEach((item) =>{
+        console.log('ok');
+        item.classList.remove('green');
+        corX.textContent = `x = 0`;
+        corY.textContent = `y = 0`;
+    })
+})
 
 
 function vazirFunc(x, y) {

@@ -55,7 +55,8 @@ body {
     border: 1px solid #533402;
     background-color: rgb(240, 169, 76);
     cursor: pointer;
-    /* color: transparent; */
+    color: transparent;
+    transition: all 0.2s ease;
 }
 
 .figura__box {
@@ -100,12 +101,13 @@ body {
 
 .red {
     background: red !important;
-    box-shadow: inset #000 !important;
+    box-shadow: #000 inset !important;
 }
 
 .green {
     background: rgba(0, 128, 0, 0.87) !important;
-    box-shadow: inset #000 !important;
+    box-shadow: #000 inset !important;
+    transition: all 0.2s ease;
 }
 
 .yellow {
@@ -147,5 +149,6 @@ body {
     height: 50px;
     border: 1px solid rgb(104, 59, 0);
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
