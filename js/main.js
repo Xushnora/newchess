@@ -102,7 +102,7 @@ chesItems.forEach((e, i) => {
         x = e.textContent[0];
         y = e.textContent[3];
     })
-    vazir.addEventListener('click', (elv) =>{
+    vazir.addEventListener('click', () =>{
         e.addEventListener('mouseover', (c) =>{
                 let xx = c.target.classList[0].split('')[1];
                 let yy = c.target.classList[1].split('')[1];
@@ -130,7 +130,9 @@ chesItems.forEach((e, i) => {
         })
 
     }) 
-    
+    ot.addEventListener('click', () => {
+
+    })
    
 })
 
