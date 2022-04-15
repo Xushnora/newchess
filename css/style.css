@@ -55,6 +55,7 @@ body {
     border: 1px solid #533402;
     background-color: rgb(240, 169, 76);
     cursor: pointer;
+    color: transparent;
 }
 
 .figura__box {
@@ -92,15 +93,43 @@ body {
     align-items: flex-end;
 }
 
+.chesItem:hover {
+    background: red !important;
+    box-shadow: inset #000 !important;
+}
+
 .red {
     background: red !important;
     box-shadow: inset #000 !important;
 }
 
 .green {
-    background-color: rgba(0, 128, 0, 0.87);
+    background: rgba(0, 128, 0, 0.87) !important;
     box-shadow: inset #000 !important;
 }
+
+.gold {
+    background: gold;
+}
+.ot:focus {
+    background: gold;
+}
+.fil:focus {
+    background: gold;
+}
+.vazir:focus {
+    background: gold;
+}
+.shoh:focus {
+    background: gold;
+}
+.piyoda:focus {
+    background: gold;
+}
+.tora:focus {
+    background: gold;
+}
+
 
 .list{
     display: flex;
