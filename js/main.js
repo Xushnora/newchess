@@ -60,6 +60,8 @@ chesItems.forEach((e, i) => {
             let bcl = e.classList[1];
             let alilar = document.querySelectorAll(`.${acl}`)
             let blilar = document.querySelectorAll(`.${bcl}`)
+            // console.log(acl);
+            // console.log(bcl);
     
             alilar.forEach(j=>{
                 j.classList.add('green');
@@ -101,18 +103,34 @@ chesItems.forEach((e, i) => {
         y = e.textContent[3];
     })
     vazir.addEventListener('click', (elv) =>{
-        // e.currentTarget.style.background = 'green'
-        e.addEventListener('mouseover', () =>{
-            let axOld = x - 1;
-            let ayOld = y - 1;
-            let axAfter = x + 1;
-            let ayAfter = y + 1;
-            console.log(x , y, axOld, ayOld, axAfter, ayAfter);
-            // console.log(y);
+        e.addEventListener('mouseover', (c) =>{
+                let xx = c.target.classList[0].split('')[1];
+                let yy = c.target.classList[1].split('')[1];
 
+                chesItems.forEach(item => {
+                    let xxx = item.classList[0].split('')[1];
+                    let yyy = item.classList[1].split('')[1];
+
+                    if(xxx == ((xx - 0) - 1)  && yyy == yy || 
+                        xxx == ((xx - 0) - 1) && yyy == ((yy - 0) + 1) ||
+                        xxx == xx && yyy == ((yy - 0) + 1) || 
+                        xxx == ((xx - 0) + 1) && yyy == ((yy - 0) + 1) || 
+                        xxx == ((xx - 0) + 1) && yyy == yy ||
+                        xxx == ((xx - 0) + 1) && yyy == ((yy - 0) - 1) ||
+                        xxx == xx && yyy == ((yy - 0) - 1) || 
+                        xxx == ((xx - 0) - 1) && yyy == ((yy - 0) - 1)
+                    ) {
+                        console.log('ok');
+                        item.classList.add('green');
+                    } else {
+                        item.classList.remove('green');
+                    }
+                })
+            
         })
 
-    })
+    }) 
+    
    
 })
 
@@ -129,3 +147,11 @@ shoh.addEventListener('click', (e) =>{
 vazir.addEventListener('click', (e) =>{
     // e.currentTarget.style.background = 'green'
 })
+
+function vazirFunc(x, y) {
+    chesItems.forEach(item => {
+        if(chesItems)
+        console.log(item.classList[0].split('')[1]);
+        console.log(item.classList[1].split('')[1]);
+    })
+}

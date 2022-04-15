@@ -55,7 +55,7 @@ body {
     border: 1px solid #533402;
     background-color: rgb(240, 169, 76);
     cursor: pointer;
-    color: transparent;
+    /* color: transparent; */
 }
 
 .figura__box {
