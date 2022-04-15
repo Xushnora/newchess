@@ -53,55 +53,6 @@ chesItems.forEach((e, i) => {
         x = e.textContent[0];
         y = e.textContent[3];
     })
-    tora.addEventListener('click', (els) =>{
-        // els.currentTarget.style.background = '#fff';
-        e.addEventListener('mouseover', ()=>{
-            let acl = e.classList[0];
-            let bcl = e.classList[1];
-            let alilar = document.querySelectorAll(`.${acl}`)
-            let blilar = document.querySelectorAll(`.${bcl}`)
-            // console.log(acl);
-            // console.log(bcl);
-    
-            alilar.forEach(j=>{
-                j.classList.add('green');
-            })
-            blilar.forEach(j=>{
-                j.classList.add('green');
-            })
-    
-            e.classList.add('red');
-            console.log(e.classList[0]);
-        })
-        e.addEventListener('mouseout', ()=>{
-            let acl = e.classList[0]
-            let bcl = e.classList[1]
-            console.log(e.classList[0]);
-            console.log(e.classList[1]);
-            let alilar = document.querySelectorAll(`.${acl}`)
-            let blilar = document.querySelectorAll(`.${bcl}`)
-    
-            alilar.forEach(j=>{
-                j.classList.remove('green');
-            })
-            blilar.forEach(j=>{
-                j.classList.remove('green');
-            })
-    
-            e.classList.remove('red');
-            console.log(e.classList[0]);
-        })
-    })
-   
-})
-
-chesItems.forEach((e, i) => {
-    e.addEventListener('mouseover', () =>{
-        corX.textContent = `x = ${e.textContent[0]}`;
-        corY.textContent = `y = ${e.textContent[3]}`;
-        x = e.textContent[0];
-        y = e.textContent[3];
-    })
     vazir.addEventListener('click', () =>{
         e.addEventListener('mouseover', (c) =>{
                 let xx = c.target.classList[0].split('')[1];
@@ -129,26 +80,208 @@ chesItems.forEach((e, i) => {
             
         })
 
+    });
+    ot.addEventListener('click', () =>{
+        e.addEventListener('mouseover', (c) =>{
+                let xx = c.target.classList[0].split('')[1];
+                let yy = c.target.classList[1].split('')[1];
+
+                chesItems.forEach(item => {
+                    let xxx = item.classList[0].split('')[1];
+                    let yyy = item.classList[1].split('')[1];
+
+                    if(xxx == ((xx - 0) + 1)  && yyy == ((yy - 0) - 2) || 
+                        xxx == ((xx - 0) + 2) && yyy == ((yy - 0) - 1) ||
+                        xxx == ((xx - 0) + 2) && yyy == ((yy - 0) + 1) || 
+                        xxx == ((xx - 0) + 1) && yyy == ((yy - 0) + 2) || 
+                        xxx == ((xx - 0) - 1) && yyy == ((yy - 0) + 2) ||
+                        xxx == ((xx - 0) - 2) && yyy == ((yy - 0) + 1) ||
+                        xxx == ((xx - 0) - 2) && yyy == ((yy - 0) - 1) || 
+                        xxx == ((xx - 0) - 1) && yyy == ((yy - 0) - 2)
+                    ) {
+                        // console.log('ok');
+                        item.classList.add('green');
+                    } else {
+                        item.classList.remove('green');
+                    }
+                })
+            
+        })
+
+    });
+    fil.addEventListener('click', () =>{
+        e.addEventListener('mouseover', (c) =>{
+                let xx = c.target.classList[0].split('')[1];
+                let yy = c.target.classList[1].split('')[1];
+
+                chesItems.forEach(item => {
+                    let xxx = item.classList[0].split('')[1];
+                    let yyy = item.classList[1].split('')[1];
+
+                    if(xxx == ((xx - 0) + 1) && yyy == ((yy - 0) - 1) ||
+                        xxx == ((xx - 0) + 2) && yyy == ((yy - 0) - 2) ||
+                        xxx == ((xx - 0) + 3) && yyy == ((yy - 0) - 3) ||
+                        xxx == ((xx - 0) + 4) && yyy == ((yy - 0) - 4) ||
+                        xxx == ((xx - 0) + 1) && yyy == ((yy - 0) + 1) ||
+                        xxx == ((xx - 0) + 2) && yyy == ((yy - 0) + 2) ||
+                        xxx == ((xx - 0) + 3) && yyy == ((yy - 0) + 3) ||
+                        xxx == ((xx - 0) + 4) && yyy == ((yy - 0) + 4) ||
+                        xxx == ((xx - 0) - 1) && yyy == ((yy - 0) + 1) ||
+                        xxx == ((xx - 0) - 2) && yyy == ((yy - 0) + 2) ||
+                        xxx == ((xx - 0) - 3) && yyy == ((yy - 0) + 3) ||
+                        xxx == ((xx - 0) - 4) && yyy == ((yy - 0) + 4) ||
+                        xxx == ((xx - 0) - 1) && yyy == ((yy - 0) - 1) ||
+                        xxx == ((xx - 0) - 2) && yyy == ((yy - 0) - 2) ||
+                        xxx == ((xx - 0) - 3) && yyy == ((yy - 0) - 3) ||
+                        xxx == ((xx - 0) - 4) && yyy == ((yy - 0) - 4) 
+                    ) {
+                        // console.log('ok');
+                        item.classList.add('green');
+                    } else {
+                        item.classList.remove('green');
+                    }
+                })
+        })
+
+    });
+    shoh.addEventListener('click', () =>{
+        e.addEventListener('mouseover', (c) =>{
+                let xx = c.target.classList[0].split('')[1];
+                let yy = c.target.classList[1].split('')[1];
+
+                chesItems.forEach(item => {
+                    let xxx = item.classList[0].split('')[1];
+                    let yyy = item.classList[1].split('')[1];
+
+                    if(xxx == ((xx - 0) + 1) && yyy == ((yy - 0) - 1) ||
+                        xxx == ((xx - 0) + 2) && yyy == ((yy - 0) - 2) ||
+                        xxx == ((xx - 0) + 3) && yyy == ((yy - 0) - 3) ||
+                        xxx == ((xx - 0) + 4) && yyy == ((yy - 0) - 4) ||
+                        xxx == ((xx - 0) + 1) && yyy == ((yy - 0) + 1) ||
+                        xxx == ((xx - 0) + 2) && yyy == ((yy - 0) + 2) ||
+                        xxx == ((xx - 0) + 3) && yyy == ((yy - 0) + 3) ||
+                        xxx == ((xx - 0) + 4) && yyy == ((yy - 0) + 4) ||
+                        xxx == ((xx - 0) - 1) && yyy == ((yy - 0) + 1) ||
+                        xxx == ((xx - 0) - 2) && yyy == ((yy - 0) + 2) ||
+                        xxx == ((xx - 0) - 3) && yyy == ((yy - 0) + 3) ||
+                        xxx == ((xx - 0) - 4) && yyy == ((yy - 0) + 4) ||
+                        xxx == ((xx - 0) - 1) && yyy == ((yy - 0) - 1) ||
+                        xxx == ((xx - 0) - 2) && yyy == ((yy - 0) - 2) ||
+                        xxx == ((xx - 0) - 3) && yyy == ((yy - 0) - 3) ||
+                        xxx == ((xx - 0) - 4) && yyy == ((yy - 0) - 4) ||
+                        xxx == ((xx - 0) - 1)  && yyy == yy || 
+                        xxx == ((xx - 0) - 1) && yyy == ((yy - 0) + 1) ||
+                        xxx == xx && yyy == ((yy - 0) + 1) || 
+                        xxx == ((xx - 0) + 1) && yyy == ((yy - 0) + 1) || 
+                        xxx == ((xx - 0) + 1) && yyy == yy ||
+                        xxx == ((xx - 0) + 1) && yyy == ((yy - 0) - 1) ||
+                        xxx == xx && yyy == ((yy - 0) - 1) || 
+                        xxx == ((xx - 0) - 1) && yyy == ((yy - 0) - 1) ||
+                        xxx == xx && yyy == ((yy - 0) - 1) || 
+                        xxx == xx && yyy == ((yy - 0) - 2) ||
+                        xxx == xx && yyy == ((yy - 0) - 3) ||
+                        xxx == xx && yyy == ((yy - 0) - 4) ||
+                        xxx == xx && yyy == ((yy - 0) - 5) ||
+                        xxx == xx && yyy == ((yy - 0) - 6) ||
+                        xxx == xx && yyy == ((yy - 0) - 7) ||
+                        xxx == xx && yyy == ((yy - 0) - 8) ||
+                        xxx == ((xx - 0) + 1) && yyy == yy ||
+                        xxx == ((xx - 0) + 2) && yyy == yy ||
+                        xxx == ((xx - 0) + 3) && yyy == yy ||
+                        xxx == ((xx - 0) + 4) && yyy == yy ||
+                        xxx == ((xx - 0) + 5) && yyy == yy ||
+                        xxx == ((xx - 0) + 6) && yyy == yy ||
+                        xxx == ((xx - 0) + 7) && yyy == yy ||
+                        xxx == ((xx - 0) + 8) && yyy == yy ||
+                        xxx == xx && yyy == ((yy - 0) + 1) || 
+                        xxx == xx && yyy == ((yy - 0) + 2) ||
+                        xxx == xx && yyy == ((yy - 0) + 3) ||
+                        xxx == xx && yyy == ((yy - 0) + 4) ||
+                        xxx == xx && yyy == ((yy - 0) + 5) ||
+                        xxx == xx && yyy == ((yy - 0) + 6) ||
+                        xxx == xx && yyy == ((yy - 0) + 7) ||
+                        xxx == xx && yyy == ((yy - 0) + 8) ||
+                        xxx == ((xx - 0) - 1) && yyy == yy ||
+                        xxx == ((xx - 0) - 2) && yyy == yy ||
+                        xxx == ((xx - 0) - 3) && yyy == yy ||
+                        xxx == ((xx - 0) - 4) && yyy == yy ||
+                        xxx == ((xx - 0) - 5) && yyy == yy ||
+                        xxx == ((xx - 0) - 6) && yyy == yy ||
+                        xxx == ((xx - 0) - 7) && yyy == yy ||
+                        xxx == ((xx - 0) - 8) && yyy == yy 
+                    ) {
+                        // console.log('ok');
+                        item.classList.add('green');
+                    } else {
+                        item.classList.remove('green');
+                    }
+                })
+        })
+
     }) 
-    ot.addEventListener('click', () => {
+    tora.addEventListener('click', () =>{
+        e.addEventListener('mouseover', (c) =>{
+                let xx = c.target.classList[0].split('')[1];
+                let yy = c.target.classList[1].split('')[1];
 
-    })
-   
+                chesItems.forEach(item => {
+                    let xxx = item.classList[0].split('')[1];
+                    let yyy = item.classList[1].split('')[1];
+
+                    if(xxx == xx && yyy == ((yy - 0) - 1) || 
+                        xxx == xx && yyy == ((yy - 0) - 2) ||
+                        xxx == xx && yyy == ((yy - 0) - 3) ||
+                        xxx == xx && yyy == ((yy - 0) - 4) ||
+                        xxx == xx && yyy == ((yy - 0) - 5) ||
+                        xxx == xx && yyy == ((yy - 0) - 6) ||
+                        xxx == xx && yyy == ((yy - 0) - 7) ||
+                        xxx == xx && yyy == ((yy - 0) - 8) ||
+                        xxx == ((xx - 0) + 1) && yyy == yy ||
+                        xxx == ((xx - 0) + 2) && yyy == yy ||
+                        xxx == ((xx - 0) + 3) && yyy == yy ||
+                        xxx == ((xx - 0) + 4) && yyy == yy ||
+                        xxx == ((xx - 0) + 5) && yyy == yy ||
+                        xxx == ((xx - 0) + 6) && yyy == yy ||
+                        xxx == ((xx - 0) + 7) && yyy == yy ||
+                        xxx == ((xx - 0) + 8) && yyy == yy ||
+                        xxx == xx && yyy == ((yy - 0) + 1) || 
+                        xxx == xx && yyy == ((yy - 0) + 2) ||
+                        xxx == xx && yyy == ((yy - 0) + 3) ||
+                        xxx == xx && yyy == ((yy - 0) + 4) ||
+                        xxx == xx && yyy == ((yy - 0) + 5) ||
+                        xxx == xx && yyy == ((yy - 0) + 6) ||
+                        xxx == xx && yyy == ((yy - 0) + 7) ||
+                        xxx == xx && yyy == ((yy - 0) + 8) ||
+                        xxx == ((xx - 0) - 1) && yyy == yy ||
+                        xxx == ((xx - 0) - 2) && yyy == yy ||
+                        xxx == ((xx - 0) - 3) && yyy == yy ||
+                        xxx == ((xx - 0) - 4) && yyy == yy ||
+                        xxx == ((xx - 0) - 5) && yyy == yy ||
+                        xxx == ((xx - 0) - 6) && yyy == yy ||
+                        xxx == ((xx - 0) - 7) && yyy == yy ||
+                        xxx == ((xx - 0) - 8) && yyy == yy 
+                    ) {
+                        // console.log('ok');
+                        item.classList.add('green');
+                    } else {
+                        item.classList.remove('green');
+                    }
+                })
+            
+        })
+
+    });
+    
 })
 
 
-ot.addEventListener('click', (e)=>{
-    // e.currentTarget.style.background = 'gold'
-})
+// chesList.addEventListener("mouseout", ()=>{
+//     console.log('ok');
+//     chesItems.forEach((item) =>{
+//         item.classList.remove('green');
+//     })
+// })
 
-shoh.addEventListener('click', (e) =>{
-    // e.currentTarget.style.background = 'green'
-})
-
-
-vazir.addEventListener('click', (e) =>{
-    // e.currentTarget.style.background = 'green'
-})
 
 function vazirFunc(x, y) {
     chesItems.forEach(item => {
@@ -157,3 +290,4 @@ function vazirFunc(x, y) {
         console.log(item.classList[1].split('')[1]);
     })
 }
+

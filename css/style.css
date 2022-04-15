@@ -108,6 +108,10 @@ body {
     box-shadow: inset #000 !important;
 }
 
+.yellow {
+    background: gold !important;
+}
+
 .gold {
     background: gold;
 }
