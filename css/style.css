@@ -14,20 +14,24 @@ body {
 
 .bigBox {
     display: flex;
-    padding-top: 100px;
-    
+    justify-content: center;
+    padding-top: 60px;
 }
 
 /* figura btns block */
 
 .figura__box button {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
     border: none;
     background-color: #fff;
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0px 0px 20px 12px rgba(0,0,0,0.42); 
+    box-shadow: inset 0px 0px 20px 12px rgba(0,0,0,0.42);
 }
 
 .figura__box button img{
@@ -49,16 +53,6 @@ body {
     flex-wrap: wrap;
 }
 
-.chesItem {
-    width: 45px;
-    height: 45px;
-    border: 1px solid #533402;
-    background-color: rgb(240, 169, 76);
-    cursor: pointer;
-    color: transparent;
-    transition: all 0.2s ease;
-}
-
 .figura__box {
     display: flex;
     flex-direction: column;
@@ -70,11 +64,16 @@ body {
     width: 120px;
     height: 50px;
     background-color: #fff;
-    color: #533402;
+    color: #8f5903;
     display: flex;
     align-items: center;
     padding-left: 15px;
     margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 24px;
+    -webkit-box-shadow: inset 0px 0px 20px 12px rgba(0,0,0,0.42); 
+    box-shadow: inset 0px 0px 20px 12px rgba(0,0,0,0.42);
+    border-radius: 6px;
 }
 
 .cordinata-y {
@@ -82,10 +81,15 @@ body {
     width: 120px;
     height: 50px;
     background-color: #fff;
-    color: #533402;
+    color: #975e02;
     display: flex;
     align-items: center;
     padding-left: 15px;
+    font-weight: bold;
+    font-size: 24px;
+    -webkit-box-shadow: inset 0px 0px 20px 12px rgba(0,0,0,0.42); 
+    box-shadow: inset 0px 0px 20px 12px rgba(0,0,0,0.42);
+    border-radius: 6px;
 }
 
 .cordinataBox {
@@ -95,19 +99,18 @@ body {
 }
 
 .chesItem:hover {
-    background: red !important;
-    box-shadow: inset #000 !important;
+    -webkit-box-shadow: inset 0px 0px 31px 12px rgba(222,0,0,0.79); 
+    box-shadow: inset 0px 0px 31px 12px rgba(222,0,0,0.79);
 }
 
 .red {
-    background: red !important;
-    box-shadow: #000 inset !important;
+    -webkit-box-shadow: inset 0px 0px 31px 12px rgba(222,0,0,0.79); 
+    box-shadow: inset 0px 0px 31px 12px rgba(222,0,0,0.79);
 }
 
 .green {
-    background: rgba(0, 128, 0, 0.87) !important;
-    box-shadow: #000 inset !important;
-    transition: all 0.2s ease;
+    -webkit-box-shadow: inset 0px 0px 31px 14px #1CBF0D; 
+    box-shadow: inset 0px 0px 31px 14px #1CBF0D;
 }
 
 .yellow {
@@ -117,38 +120,40 @@ body {
 .gold {
     background: gold;
 }
-.ot:focus {
-    background: gold;
-}
-.fil:focus {
-    background: gold;
-}
-.vazir:focus {
-    background: gold;
-}
-.shoh:focus {
-    background: gold;
-}
-.piyoda:focus {
-    background: gold;
-}
-.tora:focus {
-    background: gold;
-}
-
 
 .list{
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
-    height: 400px;
+    width: 492px;
+    height: 530px;
     list-style-type: none;
+    border: 6px solid rgb(104, 59, 0);
+    border-radius: 8px;
+    background-color: rgb(104, 59, 0);
+    color: transparent; 
 }
 .list li{
-    width: 45px;
-    height: 50px;
-    border: 1px solid rgb(104, 59, 0);
+    width: 60px;
+    height: 65px;
     cursor: pointer;
     transition: all 0.2s ease;
 }
+
+.bigBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnParent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+}
+
+.box {
+    width: 800px;
+}
+
 

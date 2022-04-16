@@ -20,8 +20,8 @@ let tora = document.querySelector('.tora');
 for(let i = 1; i<=8; i++){
     for(let j = 1; j<=8; j++){
      let obj = {
-         x: i,
-         y:j
+         x: j,
+         y:i
      }
      arr.push(obj)
     }
@@ -29,7 +29,7 @@ for(let i = 1; i<=8; i++){
 
 arr.forEach((e,i)=>{
 let li = document.createElement('li')
-// li.classList.add('chesItem');
+
 li.classList.add('a'+e.x , 'b'+e.y, 'chesItem')
     if((e.x + e.y) % 2 == 0) {
         li.style.background = `#f0d9b5`;
@@ -53,6 +53,13 @@ chesItems.forEach((e, i) => {
         y = e.textContent[3];
     })
     vazir.addEventListener('click', () =>{
+        vazir.style.backgroundColor = 'gold';
+        ot.style.backgroundColor = "white";
+        fil.style.backgroundColor = "white";
+        shoh.style.backgroundColor = "white";
+        piyoda.style.backgroundColor = "white";
+        tora.style.backgroundColor = "white";
+
         e.addEventListener('mouseover', (c) =>{
                 let xx = c.target.classList[0].split('')[1];
                 let yy = c.target.classList[1].split('')[1];
@@ -81,6 +88,12 @@ chesItems.forEach((e, i) => {
 
     });
     ot.addEventListener('click', () =>{
+        ot.style.backgroundColor = 'gold';
+        vazir.style.backgroundColor = "white";
+        fil.style.backgroundColor = "white";
+        shoh.style.backgroundColor = "white";
+        piyoda.style.backgroundColor = "white";
+        tora.style.backgroundColor = "white";
         e.addEventListener('mouseover', (c) =>{
                 let xx = c.target.classList[0].split('')[1];
                 let yy = c.target.classList[1].split('')[1];
@@ -109,6 +122,12 @@ chesItems.forEach((e, i) => {
 
     });
     fil.addEventListener('click', () =>{
+        fil.style.backgroundColor = 'gold';
+        ot.style.backgroundColor = "white";
+        vazir.style.backgroundColor = "white";
+        shoh.style.backgroundColor = "white";
+        piyoda.style.backgroundColor = "white";
+        tora.style.backgroundColor = "white";
         e.addEventListener('mouseover', (c) =>{
                 let xx = c.target.classList[0].split('')[1];
                 let yy = c.target.classList[1].split('')[1];
@@ -160,6 +179,12 @@ chesItems.forEach((e, i) => {
 
     });
     shoh.addEventListener('click', () =>{
+        shoh.style.backgroundColor = 'gold';
+        ot.style.backgroundColor = "white";
+        vazir.style.backgroundColor = "white";
+        fil.style.backgroundColor = "white";
+        piyoda.style.backgroundColor = "white";
+        tora.style.backgroundColor = "white";
         e.addEventListener('mouseover', (c) =>{
                 let xx = c.target.classList[0].split('')[1];
                 let yy = c.target.classList[1].split('')[1];
@@ -258,6 +283,12 @@ chesItems.forEach((e, i) => {
 
     }) 
     tora.addEventListener('click', () =>{
+        tora.style.backgroundColor = 'gold';
+        ot.style.backgroundColor = "white";
+        vazir.style.backgroundColor = "white";
+        shoh.style.backgroundColor = "white";
+        piyoda.style.backgroundColor = "white";
+        fil.style.backgroundColor = "white";
         e.addEventListener('mouseover', (c) =>{
                 let xx = c.target.classList[0].split('')[1];
                 let yy = c.target.classList[1].split('')[1];
@@ -309,25 +340,59 @@ chesItems.forEach((e, i) => {
         })
 
     });
+    piyoda.addEventListener('click', () =>{
+        piyoda.style.backgroundColor = 'gold';
+        ot.style.backgroundColor = "white";
+        vazir.style.backgroundColor = "white";
+        shoh.style.backgroundColor = "white";
+        tora.style.backgroundColor = "white";
+        shoh.style.backgroundColor = "white";
+        e.addEventListener('mouseover', (c) =>{
+                let xx = c.target.classList[0].split('')[1];
+                let yy = c.target.classList[1].split('')[1];
+
+                chesItems.forEach(item => {
+                    let xxx = item.classList[0].split('')[1];
+                    let yyy = item.classList[1].split('')[1];
+
+                    if(yy != 8) {
+                        if(xxx == xx && yyy == ((yy - 0) - 1) || xxx == xx && yyy == ((yy - 0) - 2)) {
+                            item.classList.add('green');
+                            if(yy != 7) {
+                                if(xxx == xx && yyy == ((yy - 0) - 1)) {
+                                    item.classList.add('green');
+                                } else {
+                                    item.classList.remove('green');
+                                }
+                            }
+                        } else {
+                            item.classList.remove('green');
+                        }
+                    } 
+                    else {
+                        item.classList.remove('green');
+                    }
+                })
+                
+            })
+            
+        });
+        
+    })
     
-})
-
-
-elUl.addEventListener("mouseout", ()=>{
-    chesItems.forEach((item) =>{
-        console.log('ok');
-        item.classList.remove('green');
-        corX.textContent = `x = 0`;
-        corY.textContent = `y = 0`;
+    elUl.addEventListener("mouseout", ()=>{
+        chesItems.forEach((item) =>{
+            console.log('ok');
+            item.classList.remove('green');
+            corX.textContent = `x = 0`;
+            corY.textContent = `y = 0`;
+        })
     })
-})
-
-
-function vazirFunc(x, y) {
-    chesItems.forEach(item => {
-        if(chesItems)
-        console.log(item.classList[0].split('')[1]);
-        console.log(item.classList[1].split('')[1]);
-    })
-}
-
+    
+    function vazirFunc(x, y) {
+        chesItems.forEach(item => {
+            if(chesItems)
+            console.log(item.classList[0].split('')[1]);
+            console.log(item.classList[1].split('')[1]);
+        })
+    }
